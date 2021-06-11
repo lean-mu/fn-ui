@@ -3,7 +3,7 @@
 
     <router-link class="navbar-brand" to="/">
         <!-- See also banner for small devices in index.html -->
-        <img class="navbar-brand" src="/images/icons/fn_transparent.png">
+        <img class="navbar-brand" src="/images/icons/mu_transparent.png">
     </router-link>
     <div>
     <div v-if="!loggedIn">

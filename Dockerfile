@@ -8,7 +8,7 @@ ENV NODE_ENV production
 
 # Install app dependencies
 ENV NPM_CONFIG_LOGLEVEL warn
-RUN npm install -g webpack@^1.14.0
+RUN npm install -g webpack@^1.15.0
 COPY package.json /app
 RUN npm install
 
