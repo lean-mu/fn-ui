@@ -37,7 +37,7 @@
     "postcss-loader": "^0.9.1",
     "postcss-url": "^5.1.2",
     "request": "^2.72.0",
-    "fetch": "^1.1.0",
+    "whatwg-fetch": "^3.6.2",
     "style-loader": "^0.13.0",
     "stylelint": "^7.1.0",
     "stylelint-loader": "^6.2.0",
