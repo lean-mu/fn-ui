@@ -1,11 +1,5 @@
 <template>
   <div class="welcome-section">
-    <!--
-    <h4>Get Started</h4>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-    </p>
-    -->
     <br>
     <br>
     <br>

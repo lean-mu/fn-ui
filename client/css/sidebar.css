@@ -9,12 +9,15 @@
     display: block;
     padding: 0;
     margin-bottom: 20px;
+    height: auto;
+   
   }
   
   & img.navbar-brand {
-      width: 80%;
-      height: 80%;
-      margin: auto;
+    display:block;
+    width: 80%;
+    height: 80%;
+    margin: auto;
   }
 
   & h4 {
@@ -38,7 +41,7 @@
   }
 }
 
-@media (min-width: 768px) {
+ @media (min-width: 768px) {
   .sidebar {
     position: fixed;
     top: 0;
@@ -81,7 +84,7 @@
       padding: 10px 5px 10px 55px;
     }
   }
-}
+} 
 
 .navbar-inverse {
   background-color: #2E2E2E;
@@ -93,7 +96,10 @@
   }
   
   & img.navbar-brand {
-
+    height: 200px;
+    width: 200px;
+    display: block;
+    margin:auto
   } 
   
 }

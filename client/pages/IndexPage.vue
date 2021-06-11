@@ -132,7 +132,7 @@ export default {
     }
   }, 
   created: function (){
-    document.title = "Functions UI";
+    document.title = "LeanMu UI";
     this.isChecked=this.autorefresh;
     if (this.autorefresh) {
       eventBus.$emit('startAutoRefreshStats');

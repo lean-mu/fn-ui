@@ -1,6 +1,7 @@
-const logger = require('config-logger');
+//const logger = require('config-logger');
+const { logger } = require("./logger.js")
 
-const StatsParser = require('./stats-parser.js');
+const StatsParser = require("./stats-parser.js")
 
 /**
  * This parser is used to parse the fn_queue, fn_running and fn_complete data
@@ -9,25 +10,25 @@ const StatsParser = require('./stats-parser.js');
  */
 module.exports = class GeneralStatsParser extends StatsParser {
   constructor() {
-    super();
+    super()
 
     this._metricNames = {
-      'fn_queued': 'Queue',
-      'fn_running': 'Running',
-      'fn_completed': 'Complete',
-    };
+      fn_queued: "Queue",
+      fn_running: "Running",
+      fn_completed: "Complete",
+    }
 
-    var metricNameRE = '(' + Object.keys(this._metricNames).join('|') + ')';
-    var metricsRE = '^' + metricNameRE + this._spacesRE + this._valueRE;
+    var metricNameRE = "(" + Object.keys(this._metricNames).join("|") + ")"
+    var metricsRE = "^" + metricNameRE + this._spacesRE + this._valueRE
 
-    this._regex = RegExp(metricsRE, 'gm');
+    this._regex = RegExp(metricsRE, "gm")
 
     //regexMatch[0] = the whole match
     //regexMatch[1] = metric name (e.g. fn_completed)
     //regexMatch[2] = metric value (integer)
-    this._WHOLE_MATCH = 0;
-    this._METRIC_NAME = 1;
-    this._METRIC_VALUE = 2;
+    this._WHOLE_MATCH = 0
+    this._METRIC_NAME = 1
+    this._METRIC_VALUE = 2
   }
 
   /*
@@ -45,21 +46,19 @@ module.exports = class GeneralStatsParser extends StatsParser {
    *                        documentation above.
    */
   parse(data) {
-    var jsonData = {};
+    var jsonData = {}
 
-    var metricData;
-    while((metricData = this._regex.exec(data)) !== null) {
-        logger.debug(
-          "Processing General Stat: " + metricData[this._WHOLE_MATCH]
-        );
+    var metricData
+    while ((metricData = this._regex.exec(data)) !== null) {
+      logger.debug("Processing General Stat: " + metricData[this._WHOLE_MATCH])
 
-        var metricsName = metricData[this._METRIC_NAME];
-        var metricsHumanName = this._metricNames[metricsName];
-        var metricsValue = parseInt(metricData[this._METRIC_VALUE]);
+      var metricsName = metricData[this._METRIC_NAME]
+      var metricsHumanName = this._metricNames[metricsName]
+      var metricsValue = parseInt(metricData[this._METRIC_VALUE])
 
-        jsonData[metricsHumanName] = metricsValue;
+      jsonData[metricsHumanName] = metricsValue
     }
 
-    return jsonData;
+    return jsonData
   }
-};
+}

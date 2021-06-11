@@ -1,5 +1,12 @@
 # UI for [Fn](https://github.com/fnproject/fn) [![CircleCI](https://circleci.com/gh/fnproject/ui.svg?style=svg)](https://circleci.com/gh/fnproject/ui)
 
+## CHANGES
+
+- switched to pino logger
+- FN_LOG_LEVEL = debug
+- refreshed deps
+- removed junk
+
 ## Usage
 
 Start an fn server

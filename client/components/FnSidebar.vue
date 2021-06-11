@@ -1,10 +1,10 @@
 <template>
   <div>
 
-    <router-link class="navbar-brand" to="/">
+    <div class="navbar-brand">
         <!-- See also banner for small devices in index.html -->
         <img class="navbar-brand" src="/images/icons/mu_transparent.png">
-    </router-link>
+    </div>
     <div>
     <div v-if="!loggedIn">
         <input style="color:grey;" type="text" placeholder="AUTH_TOKEN" v-model="fn_token"></input>
