@@ -1,7 +1,7 @@
 var express = require("express")
 var router = express.Router()
 var helpers = require("../helpers/app-helpers.js")
-// var logger = require('config-logger');
+
 const { logger } = require("../helpers/logger")
 
 router.get("/", function (req, res) {

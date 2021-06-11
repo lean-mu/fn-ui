@@ -1,6 +1,6 @@
 var url = require("url")
 var request = require("request")
-// var logger = require('config-logger');
+
 const { logger } = require("./logger.js")
 
 exports.extend = function (target) {
@@ -24,7 +24,7 @@ exports.getApiEndpoint = function (req, path, params, successcb, errorcb) {
 
   logger.debug("GET " + url + ", params: ", params)
 
-  var options = { url: url, qs: params }
+  var options = { url: url, xqs: params }
 
   options = exports.addAuth(options, req)
 
