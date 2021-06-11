@@ -170,7 +170,7 @@ export default {
       }
     },
     setTitle: function(){
-      document.title = this.app.name + " | Functions UI";
+      document.title = this.app.name + " | LeanMu UI";
     },
     appLoaded: function(){
       this.appid = this.app.id;

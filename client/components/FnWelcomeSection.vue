@@ -11,21 +11,18 @@
     <br>
     <ul class="nav nav-sidebar">
       <li>
-        <a href="https://github.com/fnproject/fn#quickstart" target="_blank">
-          <i class="fa fa-bolt"></i> Quick Start
-        </a>
-      </li>
-      <li><a href="http://petstore.swagger.io/?url=https://raw.githubusercontent.com/fnproject/fn/master/docs/swagger_v2.yml" target="_blank">
-        <i class="fa fa-file-text-o"></i> Fn API</a>
-      </li>
-      <li>
-        <a href="https://github.com/fnproject/fn" target="_blank">
-          <i class="fa fa-github"></i> Fn GitHub
+        <a href="https://snapcore.com/mu/quickstart" target="_blank">
+          <i class="fa fa-graduation-cap"></i> Quick Start
         </a>
       </li>
       <li>
-        <a href="https://github.com/fnproject/ui" target="_blank">
-        <i class="fa fa-github"></i> Fn UI GitHub
+        <a href="https://github.com/lean-mu" target="_blank">
+          <i class="fa fa-github"></i> Lean-Mu on GitHub
+        </a>
+      </li>
+      <li>
+        <a href="https://leanmu.slack.com" target="_blank">
+        <i class="fa fa-slack"></i> Mu Community
         </a>
       </li>
     </ul>

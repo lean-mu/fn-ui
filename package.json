@@ -1,6 +1,6 @@
 {
-  "name": "FunctionsUI",
-  "description": "Functions UI",
+  "name": "LeanMuUI",
+  "description": "LeanMu UI",
   "version": "0.0.39",
   "private": true,
   "scripts": {

@@ -7,10 +7,10 @@
     </router-link>
     <div>
     <div v-if="!loggedIn">
+        <input style="color:grey;" type="text" placeholder="AUTH_TOKEN" v-model="fn_token"></input>
         <button type="button" class="btn btn-default" @click='login' :disabled="loggingin">
             Login
         </button>
-        <input style="color:grey;" type="text" placeholder="FN_TOKEN" v-model="fn_token"></input>
     </div>
     <button type="button" class="btn btn-default" v-if="loggedIn" @click='logout'>
         Logout
