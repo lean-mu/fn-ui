@@ -1,0 +1,12 @@
+.git/
+.gitignore
+**/.DS_Store
+# Ignore docker and environment files:
+**/*Dockerfile
+docker-compose.yml
+**/*.env
+.dockerignore
+client
+test
+node_modules
+test_integration
