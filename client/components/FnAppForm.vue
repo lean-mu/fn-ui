@@ -69,9 +69,9 @@ export default {
       eventBus.$emit('NotificationClear');
       this.app.config = linesToConfig(this.appConfig);
       if (this.edit) {
-        var url = '/api/apps/' + encodeURIComponent(this.app.id);
+        var url = process.env.VUE_APP_BASE_URL + '/api/apps/' + encodeURIComponent(this.app.id);
       } else {
-        var url = '/api/apps';
+        var url = process.env.VUE_APP_BASE_URL + '/api/apps';
       };
       $.ajax({
         headers: {'Authorization': getAuthToken()},

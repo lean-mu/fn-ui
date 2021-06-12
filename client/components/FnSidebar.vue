@@ -52,7 +52,7 @@
             t.loggingin = true
             $.ajax({
               headers: {'Authorization': 'Bearer '+t.fn_token},
-              url: '/api/apps/',
+              url: process.env.VUE_APP_BASE_URL + '/api/apps/',
               method: 'GET',
               contentType: "application/json",
               dataType: 'json',

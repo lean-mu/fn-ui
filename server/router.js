@@ -1,9 +1,9 @@
-var express = require('express');
-var router = express.Router();
+var express = require("express")
+var router = express.Router()
 
-router.use('/api/apps', require('./controllers/apps.js'));
-router.use('/api/fns', require('./controllers/functions.js'));
-router.use('/api/info', require('./controllers/info.js'));
-router.use('/api/stats', require('./controllers/stats.js'));
+router.use(process.env.VUE_APP_BASE_URL + "/api/apps", require("./controllers/apps.js"))
+router.use(process.env.VUE_APP_BASE_URL + "/api/fns", require("./controllers/functions.js"))
+router.use(process.env.VUE_APP_BASE_URL + "/api/info", require("./controllers/info.js"))
+router.use(process.env.VUE_APP_BASE_URL + "/api/stats", require("./controllers/stats.js"))
 
-module.exports = router;
+module.exports = router

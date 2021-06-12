@@ -4,6 +4,7 @@
 
 - switched to pino logger
 - FN_LOG_LEVEL = debug
+- VUE_APP_BASE_URL = /ui/
 - refreshed deps
 - removed junk
 
