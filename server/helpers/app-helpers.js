@@ -24,7 +24,7 @@ exports.getApiEndpoint = function (req, path, params, successcb, errorcb) {
 
   logger.debug("GET " + url + ", params: ", params)
 
-  var options = { url: url, xqs: params }
+  var options = { url: url, qs: params }
 
   options = exports.addAuth(options, req)
 
