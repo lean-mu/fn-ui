@@ -2,6 +2,8 @@
 REPO := leanmu/fnui
 VERSION := 1.0
 
+.PHONY: build build-nocache push
+
 build:
 	docker build -t $(REPO):$(VERSION)  -t $(REPO):latest .
 
