@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>LeanMu UI</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="icon" type="image/png" href="${context}/images/favicon.ico">
+    <meta name="theme-color" content="#ffffff">
+    <link rel=stylesheet href="${context}/build/app.css">
+</head>
+
+<body>
+    <div id="app">
+        <fn-notification></fn-notification>
+
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                        aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="#">
+                        <!-- See also sidebar banner for large devices in FNSidebar.vue -->
+                        <img class="navbar-brand" src="${context}/images/mu.png">
+                    </a>
+                </div>
+                <!-- This is the top navbar used on narrow displays. See also the left sidebar in client/components/FnWelcomeSection.vue -->
+                <div id="navbar" class="navbar-collapse collapse" aria-expanded="false" style="height: 1px;">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="https://linktoonlinepresentation.com" target="_blank">
+                                <i class="fa fa-eye"></i> What is Mu?
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/fnproject/fn#quickstart" target="_blank">
+                                <i class="fa fa-bolt"></i> Quick Start
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/fnproject/fn" target="_blank">
+                                <i class="fa fa-github"></i> Mu GitHub
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/grafana" target="_blank">
+                                <i class="fa fa-desktop"></i> Monitoring
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/fnproject/ui" target="_blank">
+                                <i class="fa fa-slack"></i> Community
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-4 col-md-3 col-lg-2 sidebar">
+                    <fn-sidebar :apps="apps"></fn-sidebar>
+                </div>
+                <div class="col-sm-8 col-sm-offset-4 col-md-9 col-md-offset-3 col-lg-10 col-lg-offset-2 main">
+                    <div>
+                        <router-view :apps="apps" :stats="stats" :statshistory="statshistory"
+                            :autorefresh="autorefresh"></router-view>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="${context}/build/app.js"></script>
+</body>
+</html>

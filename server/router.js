@@ -1,9 +1,12 @@
 var express = require("express")
 var router = express.Router()
 
-router.use(process.env.VUE_APP_BASE_URL + "/api/apps", require("./controllers/apps.js"))
-router.use(process.env.VUE_APP_BASE_URL + "/api/fns", require("./controllers/functions.js"))
-router.use(process.env.VUE_APP_BASE_URL + "/api/info", require("./controllers/info.js"))
-router.use(process.env.VUE_APP_BASE_URL + "/api/stats", require("./controllers/stats.js"))
+const baseurl = process.env.VUE_APP_BASE_URL || ""
+
+router.get(baseurl + "/", require("./controllers/index.js"))
+router.use(baseurl + "/api/apps", require("./controllers/apps.js"))
+router.use(baseurl + "/api/fns", require("./controllers/functions.js"))
+router.use(baseurl + "/api/info", require("./controllers/info.js"))
+router.use(baseurl + "/api/stats", require("./controllers/stats.js"))
 
 module.exports = router

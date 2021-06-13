@@ -15,10 +15,10 @@ COPY . /app
 
 # Build assets
 RUN webpack
-
 RUN mkdir /dist
-RUN cp -r package.json server.js /dist
-RUN cp -r server public /dist
+RUN cp -r package.json /dist
+RUN cp -r build public /dist
+RUN rm -rf /dist/public/fonts
 
 WORKDIR /dist
 RUN npm install --no-package-lock --production
@@ -32,4 +32,4 @@ COPY --from=build /dist /app
 ENV PORT 4000
 EXPOSE 4000
 
-CMD [ "node", "server.js" ]
+CMD [ "node", "build/backend.js" ]

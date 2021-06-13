@@ -3,7 +3,7 @@
 
     <div class="navbar-brand">
         <!-- See also banner for small devices in index.html -->
-        <img class="navbar-brand" src="/images/icons/mu_transparent.png">
+        <img class="navbar-brand" src="/images/mu.png">
     </div>
     <div>
     <div v-if="!loggedIn">

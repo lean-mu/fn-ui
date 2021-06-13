@@ -65,7 +65,10 @@ module.exports = [
           test: /\.css$/,
           loader: extractTextPlugin.extract("style-loader", "css-loader!postcss"),
         },
-
+        {
+          test: /\.html$/,
+          loader: "file-loader",
+        },
         // ES2015
         {
           test: /\.js$/,

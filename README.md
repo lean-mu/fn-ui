@@ -8,6 +8,12 @@
 - refreshed deps
 - removed junk
 
+TODO:
+ - parametrise the context path
+ - replace request with fetch
+    "vue": "^2.1.6",      "vue": "^2.6.14",
+
+
 ## Usage
 
 Start an fn server
