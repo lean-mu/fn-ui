@@ -20,7 +20,7 @@ fs.readdirSync("node_modules")
 module.exports = [
   {
     name: "server",
-    entry: "./server/server.js",
+    entry: "./src/server/server.js",
     target: "node",
     output: {
       path: path.join(__dirname, "build"),
@@ -30,7 +30,7 @@ module.exports = [
   },
   {
     name: "client",
-    entry: ["jquery/", "./client/client.js"],
+    entry: ["jquery/", "./src/client/client.js"],
     // target: 'web', // by default
     output: {
       path: path.join(__dirname, "public", "build"),
