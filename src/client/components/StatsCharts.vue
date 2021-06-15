@@ -25,7 +25,7 @@
 </template>
 
 <script>
-  import { eventBus } from '../client';
+//   import { eventBus } from '../client';
   import { chartConfig } from './graphUtilities';
   import IndividualStatsChart from '../components/IndividualStatsChart';
 
@@ -84,8 +84,6 @@
     float:left;
   }
 }
-
-
 .chart-title{
   text-align:center;
   padding-bottom:10px;
