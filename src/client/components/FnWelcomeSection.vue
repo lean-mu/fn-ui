@@ -5,18 +5,21 @@
     <br />
     <ul class="nav nav-sidebar">
       <li>
-        <a href="https://linktoonlinepresentation.com" target="_blank">
+        <a href="https://www.snapcore.com/leanmu" target="_blank">
           <i class="fa fa-eye"></i> What is Mu?
         </a>
       </li>
       <li>
-        <a href="https://github.com/fnproject/fn#quickstart" target="_blank">
+        <a
+          href="https://www.snapcore.com/leanmu/Quick-Start.html"
+          target="_blank"
+        >
           <i class="fa fa-bolt"></i> Quick Start
         </a>
       </li>
       <li>
-        <a href="https://github.com/fnproject/fn" target="_blank">
-          <i class="fa fa-github"></i> Mu GitHub
+        <a href="https://github.com/lean-mu" target="_blank">
+          <i class="fa fa-github"></i> LeanMu GitHub
         </a>
       </li>
       <li>
@@ -25,8 +28,13 @@
         </a>
       </li>
       <li>
-        <a href="https://github.com/fnproject/ui" target="_blank">
+        <a href="https://leanmu.slack.com" target="_blank">
           <i class="fa fa-slack"></i> Community
+        </a>
+      </li>
+      <li>
+        <a href="https://stackoverflow.com" target="_blank">
+          <i class="fa fa-stack-overflow"></i> Questions
         </a>
       </li>
     </ul>

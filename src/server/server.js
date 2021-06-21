@@ -3,7 +3,7 @@ var path = require("path")
 var url = require("url")
 var bodyParser = require("body-parser")
 const { logger } = require("./helpers/logger")
-var pino = require("express-pino-logger")()
+// var pino = require("express-pino-logger")()
 
 var app = express()
 
@@ -17,11 +17,11 @@ if (!apiUrl || !apiUrl.hostname) {
 
 app.set("api-url", apiUrl)
 
-app.use(pino)
+//app.use(pino)
 
 app.use(bodyParser.json())
 
-const baseurl = process.env.VUE_APP_BASE_URL || ""
+const baseurl = "/ui"
 app.use(baseurl, express.static("public"))
 
 app.use(require("./router.js"))

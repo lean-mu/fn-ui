@@ -122,7 +122,7 @@ export default {
         var t = this;
         $.ajax({
           headers: {'Authorization': getAuthToken()},
-          url: process.env.VUE_APP_BASE_URL + '/api/apps/' + encodeURIComponent(app.id),
+          url: "/ui" + '/api/apps/' + encodeURIComponent(app.id),
           method: 'DELETE',
           dataType: 'json',
           success: (app) => { eventBus.$emit('AppDeleted', app) },

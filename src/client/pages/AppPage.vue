@@ -137,7 +137,7 @@ export default {
       var t = this;
       $.ajax({
         headers: {'Authorization': getAuthToken()},
-        url: process.env.VUE_APP_BASE_URL + '/api/fns/?app_id=' + encodeURIComponent(t.app.id),
+        url: "/ui" + '/api/fns/?app_id=' + encodeURIComponent(t.app.id),
         dataType: 'json',
         success: function(fns){
           t.fns = fns;
@@ -150,7 +150,7 @@ export default {
       var t = this;
       $.ajax({
         headers: {'Authorization': getAuthToken()},
-        url: process.env.VUE_APP_BASE_URL + '/api/apps/' + encodeURIComponent(appID),
+        url: "/ui" + '/api/apps/' + encodeURIComponent(appID),
         dataType: 'json',
         success: (app) => {t.app = app; if (cb) {cb()} },
         error: defaultErrorHandler
@@ -161,7 +161,7 @@ export default {
         var t = this;
         $.ajax({
           headers: {'Authorization': getAuthToken()},
-          url: process.env.VUE_APP_BASE_URL + '/api/fns/' + encodeURIComponent(fn.id),
+          url: "/ui" + '/api/fns/' + encodeURIComponent(fn.id),
           method: 'DELETE',
           dataType: 'json',
           success: (app) => { t.loadFns() },

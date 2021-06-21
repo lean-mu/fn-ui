@@ -6,7 +6,7 @@
   "scripts": {
     "build": "webpack",
     "dev": "PORT=4000 VUE_APP_BASE_URL=/ui FN_API_URL=http://localhost:8080 node build/backend.js",
-    "drun": " docker run -p 4000:4000 -e PORT=4000 -e FN_API_URL=http://localhost:8080 leanmu/fnui",
+    "drun": " docker run -p 4000:4000 -e VUE_APP_BASE_URL=/ui -e PORT=4000 -e FN_API_URL=http://localhost:8080 leanmu/fnui",
     "start": "node build/backend.js",
     "lint": "./node_modules/.bin/eslint .",
     "test": "./node_modules/.bin/mocha test/test_*.js",

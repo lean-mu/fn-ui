@@ -74,7 +74,7 @@ export const getApiUrl = function (cb, errCb) {
   errCb = errCb || null
   $.ajax({
     headers: { Authorization: getAuthToken() },
-    url: process.env.VUE_APP_BASE_URL + "/api/info/api-url",
+    url: "/ui" + "/api/info/api-url",
     method: "GET",
     contentType: "application/json",
     dataType: "json",

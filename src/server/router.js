@@ -1,7 +1,7 @@
 var express = require("express")
 var router = express.Router()
 
-const baseurl = process.env.VUE_APP_BASE_URL || ""
+const baseurl = "/ui"
 
 console.log("baseurl=" + baseurl)
 

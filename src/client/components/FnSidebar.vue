@@ -3,7 +3,7 @@
 
     <div class="navbar-brand">
         <!-- See also banner for small devices in index.html -->
-        <img class="navbar-brand" src="/images/mu.png">
+        <img class="navbar-brand" src="/ui/images/mu.png">
     </div>
     <div>
     <div v-if="!loggedIn">
@@ -52,7 +52,7 @@
             t.loggingin = true
             $.ajax({
               headers: {'Authorization': 'Bearer '+t.fn_token},
-              url: process.env.VUE_APP_BASE_URL + '/api/apps/',
+              url: '/ui/api/apps/',
               method: 'GET',
               contentType: "application/json",
               dataType: 'json',

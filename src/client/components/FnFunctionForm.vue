@@ -95,9 +95,9 @@ export default {
       this.fn.config = linesToConfig(this.fnConfig);
 
       if (this.edit){
-        var url = process.env.VUE_APP_BASE_URL + '/api/fns/' + encodeURIComponent(this.fn.id)
+        var url = "/ui" + '/api/fns/' + encodeURIComponent(this.fn.id)
       }else{
-        var url = process.env.VUE_APP_BASE_URL + '/api/fns/'
+        var url = "/ui" + '/api/fns/'
       }
       $.ajax({
         headers: {'Authorization': getAuthToken()},

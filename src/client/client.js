@@ -23,8 +23,8 @@ const numXValues = 50
 
 const router = new VueRouter({
   routes: [
-    { path: process.env.VUE_APP_BASE_URL + "/", component: IndexPage },
-    { path: process.env.VUE_APP_BASE_URL + "/app/:appid", component: AppPage },
+    { path: "/ui" + "/", component: IndexPage },
+    { path: "/ui" + "/app/:appid", component: AppPage },
   ],
 })
 
@@ -46,7 +46,7 @@ new Vue({
       var t = this
       $.ajax({
         headers: { Authorization: getAuthToken() },
-        url: process.env.VUE_APP_BASE_URL + "/api/apps",
+        url: "/ui" + "/api/apps",
         dataType: "json",
         success: (apps) => (t.apps = apps),
         error: defaultErrorHandler,
@@ -63,7 +63,7 @@ new Vue({
     loadStats: function () {
       if (this.autorefresh) {
         $.ajax({
-          url: process.env.VUE_APP_BASE_URL + "/api/stats",
+          url: "/ui" + "/api/stats",
           dataType: "json",
           success: this.handleStats,
           error: defaultErrorHandler,

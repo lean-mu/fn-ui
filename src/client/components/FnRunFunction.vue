@@ -68,7 +68,7 @@ export default {
 
       $.ajax({
         headers: {'Authorization': getAuthToken()},
-        url: process.env.VUE_APP_BASE_URL + '/api/fns/invoke/' + encodeURIComponent(this.fn.id),
+        url: "/ui" + '/api/fns/invoke/' + encodeURIComponent(this.fn.id),
         method: 'POST',
         data: JSON.stringify({payload: this.payload}),
         contentType: "application/json",
