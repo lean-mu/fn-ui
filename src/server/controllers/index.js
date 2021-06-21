@@ -1,10 +1,9 @@
 const { logger } = require("../helpers/logger")
+const es6Renderer = require("express-es6-template-engine")
 
-var es6Renderer = require("express-es6-template-engine")
+const baseurl = process.env.VUE_APP_BASE_URL || ""
 
-var context = process.env.VUE_APP_BASE_URL || ""
-
-logger.info("Server running on context " + context)
+logger.info("Server running on baseurl " + baseurl)
 
 var indexhtml
 
@@ -18,7 +17,7 @@ es6Renderer(
   "./build/" + indexpath,
   {
     locals: {
-      context: context,
+      baseurl: baseurl,
     },
   },
   (err, content) => {

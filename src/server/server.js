@@ -20,7 +20,9 @@ app.set("api-url", apiUrl)
 app.use(pino)
 
 app.use(bodyParser.json())
-app.use(express.static("public"))
+
+const baseurl = process.env.VUE_APP_BASE_URL || ""
+app.use(baseurl, express.static("public"))
 
 app.use(require("./router.js"))
 app.disable("etag")
