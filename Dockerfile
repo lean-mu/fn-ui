@@ -1,4 +1,4 @@
-FROM mhart/alpine-node:14 AS build
+FROM node:14-alpine AS build
 
 RUN mkdir /app
 WORKDIR /app
@@ -9,7 +9,7 @@ ENV NODE_ENV production
 ENV NPM_CONFIG_LOGLEVEL warn
 COPY package.json /app
 RUN npm install -g webpack@^1.15.0
-RUN npm install --no-package-lock
+RUN npm install --no-package-lock --also=dev
 
 # Bundle app source
 COPY . /app
@@ -24,7 +24,7 @@ RUN rm -rf /dist/public/fonts
 WORKDIR /dist
 RUN npm install --no-package-lock --production
 
-FROM mhart/alpine-node:14 AS release
+FROM node:14-alpine AS release
 
 WORKDIR /app
 

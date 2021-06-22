@@ -10,3 +10,4 @@ client
 test
 node_modules
 test_integration
+package-lock.json
