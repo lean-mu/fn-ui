@@ -1,5 +1,4 @@
 require("./css/app.css")
-
 require("expose?$!expose?jQuery!jquery")
 require("bootstrap/dist/js/bootstrap.min")
 
@@ -23,7 +22,7 @@ const numXValues = 50
 
 const router = new VueRouter({
   routes: [
-    { path: "/ui" + "/", component: IndexPage },
+    { path: "/ui", component: IndexPage },
     { path: "/ui" + "/app/:appid", component: AppPage },
   ],
 })

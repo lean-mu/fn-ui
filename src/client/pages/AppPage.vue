@@ -1,7 +1,7 @@
 <template>
   <div>
     <ol class="breadcrumb">
-      <li><router-link to="/">Apps</router-link>      </li>
+      <li><router-link to="/ui">Apps</router-link>      </li>
       <li class="active">{{app.name}}</li>
     </ol>
     <br />
