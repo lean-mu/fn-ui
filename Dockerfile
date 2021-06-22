@@ -8,7 +8,8 @@ ENV NODE_ENV production
 # Install app dependencies
 ENV NPM_CONFIG_LOGLEVEL warn
 COPY package.json /app
-RUN npm install -g webpack@^1.15.0 && npm install --no-package-lock
+RUN npm install -g webpack@^1.15.0
+RUN npm install --no-package-lock
 
 # Bundle app source
 COPY . /app
