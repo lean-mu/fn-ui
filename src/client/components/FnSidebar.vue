@@ -19,7 +19,7 @@
 
     <ul class="nav nav-sidebar" v-if="app">
       <li :class="{active: app && app.id == a.id}"  v-for="a in apps">
-        <router-link :to="'/ui/app/' + encodeURIComponent(a.id)">
+        <router-link :to="'/app/' + encodeURIComponent(a.id)">
           {{a.name}}
           <span class="sr-only" v-if="app && app.id == a.id">(current)</span>
         </router-link>
