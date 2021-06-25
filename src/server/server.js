@@ -3,7 +3,7 @@ var path = require("path")
 var url = require("url")
 var bodyParser = require("body-parser")
 const { logger } = require("./helpers/logger")
-// var pino = require("express-pino-logger")()
+var pino = require("express-pino-logger")()
 
 var app = express()
 
@@ -17,14 +17,25 @@ if (!apiUrl || !apiUrl.hostname) {
 
 app.set("api-url", apiUrl)
 
-//app.use(pino)
+if (process.env.FN_LOG_LEVEL == "debug") app.use(pino)
 
 app.use(bodyParser.json())
 
-const baseurl = "/ui"
+const baseurl = process.env.BASE_URL || "/"
+logger.info("using baser_url=" + baseurl)
+
 app.use(baseurl, express.static("public"))
 
-app.use(require("./router.js"))
+var router = express.Router()
+
+router.get(baseurl, require("./controllers/index.js"))
+router.use(baseurl + "api/apps", require("./controllers/apps.js"))
+router.use(baseurl + "api/fns", require("./controllers/functions.js"))
+router.use(baseurl + "api/info", require("./controllers/info.js"))
+router.use(baseurl + "api/stats", require("./controllers/stats.js"))
+
+app.use(router)
+
 app.disable("etag")
 
 var port = process.env.PORT || 4000
